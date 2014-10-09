@@ -3,29 +3,72 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <div class="bs-example">
+        <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <h2>MedicoSoft</h2>
+                    <div class="carousel-caption">
+                        <h3>First slide label</h3>
+                        <img src="~/Images/croix.jpg" class="icone" />
+                        <p>Le meilleur logiciel de gestion de dossier du monde médical.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2>Patients</h2>
+                    <div class="carousel-caption">
+                        <h3>Second slide label</h3>
+                        <p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2>Personnel</h2>
+                    <div class="carousel-caption">
+                        <h3>Third slide label</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+    <!--<p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>-->
 </div>
 
+<div class="fiche">
+    <img src=" ~/Images/EliseD.jpg" class="avatar" />
+    <div class="text-block">    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus sed leo et faucibus. Etiam sit amet cursus diam. Aenean finibus vel ligula sit amet convallis. Ut finibus vestibulum efficitur. Vestibulum elementum dapibus purus, vel facilisis turpis eleifend eu. Integer sed pharetra nisi. Donec pulvinar ipsum ex, sit amet ultricies diam accumsan ac. Sed viverra lacus at tortor sagittis, et tempus erat maximus. Donec non laoreet elit. Integer mi enim, congue at justo vel, sollicitudin pellentesque justo. Nunc faucibus id magna vitae suscipit. Mauris consectetur ligula nisi, quis molestie dui eleifend in. Curabitur mi turpis, fermentum a eros id, facilisis dignissim magna. Integer varius eleifend felis sit amet convallis.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin et semper ante. Aenean vehicula molestie magna. Ut ut massa sodales erat porta laoreet ac a sem. Fusce eleifend velit eget odio congue, et sodales purus sollicitudin. Proin imperdiet erat sed elit rhoncus, et porta risus feugiat. Vestibulum quis gravida enim. Integer ipsum risus, porta et posuere vitae, tristique sed nibh. Vestibulum tristique gravida nulla, a pharetra urna finibus non. Nunc sagittis posuere tellus non blandit. Pellentesque ac ex eu libero convallis bibendum sit amet in massa.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec bibendum eleifend tellus id imperdiet. Integer a arcu mollis, bibendum purus at, congue odio. Curabitur dictum, lorem nec tincidunt placerat, ipsum ligula blandit massa, sed iaculis felis massa a ipsum. Ut pretium, neque sed rhoncus ullamcorper, mi ligula blandit ligula, sit amet varius sem enim sit amet libero. Curabitur lacinia felis ac molestie efficitur. In ut purus id nunc tristique molestie vel id dui. Integer pulvinar eros eros, vitae luctus odio mollis at. Duis congue maximus ullamcorper. Nunc lectus ligula, sagittis et dapibus eget, placerat sit amet velit. Sed mollis enim diam, ac luctus ipsum pulvinar ut. Praesent turpis nisi, egestas at tellus vel, tristique ullamcorper odio. Cras faucibus sit amet lectus id efficitur. Vivamus et massa in lectus ornare interdum nec id velit. Sed commodo eget quam ut venenatis.</div>
+</div>
+<div class="clearfix"></div> 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    <div class="col-md-4 user">
+        <h2>Utilisateurs</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Gérez en direct les dossiers des patients et du personnel. Simple et intuitif, vous pouvez modifier, insérer ou supprimer les dossiers en quelques clicks.
         </p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+    <div class="col-md-4 agenda">
+        <h2>Agenda</h2>
+        <p>Prenez les rendez-vous grâce à l'agenda électronique du MédicoSoft.</p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    <div class="clearfix"></div>
 </div>

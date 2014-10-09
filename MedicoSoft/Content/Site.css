@@ -40,3 +40,39 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+/*bootstrap-theme.min*/
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.item{
+    background: #333;    
+    text-align: center;
+    height: 300px !important;
+}
+.carousel{
+    margin-top: 20px;
+}
+.bs-example{
+	margin: 20px;
+}
+
+.icone                      {width : 150px; height: 150px; float: left; margin : 50px 10px 50px 10px;}
+
+/*.navbar*/
+.navbar-collapse collapse   {float : left;}
+.login a                    {text-decoration : none; color:#808080;}
+.login a:hover              {color:#ffffff;}
+.login                      {float: right; padding : 15px 5px 0px 0px;}
+
+.avatar                     {height:150px; width : 150px; border-radius:10px; float: left; margin: 50px 50px 50px 50px;}
+.txt-block                  {float : right; margin: 25px 10px 25px 10px;padding; 10px 10px 10px 10px;}
+.fiche                      {margin: 25px 10px 25px 10px;}
+
+.row                        {border-radius: 10px; border:solid 2px #808080;}
+.user              {width :500px; margin : 0px 20px 0px 50px; float:left;}
+.agenda            {width :500px; margin : 0px 50px 0px 20px; float :right;}

@@ -23,8 +23,20 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    
                 </ul>
+                @if (Session["login"] == null)
+                {  
+                    <div class="login">@Html.ActionLink("Login", "Login", new { controller = "Login" })</div>
+                }
+               else
+                {
+                    @{string message ="Bienvenue "+ @Session["login"];}
+                    <div class="login">@Html.ActionLink(message, "Login", new { controller = "Login" })</div>
+                }
+                <div class="clearfix"></div>  
             </div>
+            
         </div>
     </div>
     <div class="container body-content">
