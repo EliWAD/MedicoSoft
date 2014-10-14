@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="panel-default">
+        <div class="panel-heading"><h2>Utilisateurs</h2></div>
+        <div class="panel-body">
+            
+            <form method="post" action="/User/Liste">
+                <br />
+                <br />
+                <h3>
+                    Afficher la liste des dossiers.
+                </h3>
+                    <br />
+                   
+                    <input type="submit" value="OK &gt" />
+                    <br />
+                    <br />
+</form>
+            <form method="post" action="/User/FichePatient">
+                <br />
+                <br />
+                <h3>
+                    Afficher le dossier d'un patient.
+                </h3>
+               
+                <br />
+                <input type="submit" value="OK &gt" />
+                <br />
+                <br />
+            </form>
+        </div>
+    </div>
+}
+
+
+
+
+
+

@@ -4,13 +4,26 @@
     ViewBag.Title = "Form";
 }
 
-<div class="panel-default">
-    <div class="panel-heading">Connectez-vous</div>
+@using(Html.BeginForm())
+{
+    <div class="panel-default">
+    <div class="panel-heading"><h2>Connectez-vous</h2></div>
     <div class="panel-body">
         <form method="post" action="/Login/Form">
-            Login : 
+            <br />
+            <br />
+            Login :      @Html.TextBoxFor(x=> x.Login)
+            <br />
+            <br />
+            Password :   @Html.PasswordFor(x=> x.Password)
+            <br />
+            <br />
+            <input type="submit" value="Go" />
+            <br />
+            <br />
         </form>
     </div>
 </div>
-<h2>Verification</h2>
+}
+
 

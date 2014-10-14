@@ -16,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("MedicoSoft", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -27,12 +27,14 @@
                 </ul>
                 @if (Session["login"] == null)
                 {  
-                    <div class="login">@Html.ActionLink("Login", "Login", new { controller = "Login" })</div>
+                    <div class="login">@Html.ActionLink("Login", "Form", new { controller = "Login" })</div>
                 }
                else
                 {
-                    @{string message ="Bienvenue "+ @Session["login"];}
-                    <div class="login">@Html.ActionLink(message, "Login", new { controller = "Login" })</div>
+                    
+                        string message ="Bienvenue "+ @Session["login"];
+                    
+                    <div class="login">@Html.ActionLink(message, "LogOut", new { controller = "Login" })</div>
                 }
                 <div class="clearfix"></div>  
             </div>
