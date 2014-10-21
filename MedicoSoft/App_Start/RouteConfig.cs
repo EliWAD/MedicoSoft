@@ -16,7 +16,9 @@ namespace MedicoSoft
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "MedicoSoft.Controllers" }          //changement permet au système de choisir le Controller se trouvant dans le namespace principal en priorité si un conflit survient.
+
             );
         }
     }

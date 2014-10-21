@@ -19,14 +19,16 @@ namespace MedicoSoft.Controllers
             
             List<Utilisateur> maListe = Utilisateur.getInfos();
             //MySession.isMedecin = MySession.User.getRole() == TypeOfUser.Medecin;
+
+            return View(maListe);
         }
 
-        public ActionResult Liste(Utilisateur u)
+        public ActionResult ListePatient()
         {
 
-
+            if (MySession.Login == null) return RedirectToRoute(new { controller = "Home", action = "Index" }); 
             Medecin me = MySession.User.ConvertMedecin();
-            return RedirectToRoute(new { controller = "Login", action = "Form" });
+            return View(me.MesPatients());
             
         }
 

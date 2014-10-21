@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Veuillez renseigner votre Numéro de Registre National</h3>
+<form action="" method="post">
+    <input type="text" maxlength="12" class="numRegNational" />
+    <input type="submit" value="GO" />
+</form>
+<br />
+<br />
+<div id="map" class="map" ></div>
+<br />
+<br />
+<div id="infoposition"></div>
+
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=set_to_true_or_false"></script>
+<script>
+    //position par défaut (Grand place, bxl)
+    var centerpos = new google.maps.LatLng(50.846702, 4.352397);
+
+    //Options relatives à la carte
+    var optionsGmaps = {
+        center: centerpos,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoom: 15
+    };
+
+    //ROADMAP peut être remplacé par SATELLITE, HYBRID ou TERRAIN
+    //Zoom: 0=terre entière, 19= au niv de la rue
+
+    //Initialisation de la carte pour l'élément portant l'id "map"
+    var map = new google.maps.Map(document.getElementById("map"), optionsGmaps);
+
+    //... et la variable qui va stocker les coordonnées
+    var latlng;
+
+
+    function maPosition(position) {
+
+        //creation de la map
+        map = new google.maps.Map(document.getElementById("map"), optionsGmaps);
+
+
+        var infopos = "Position déterminée :\n";
+        infopos += "Latitude : " + position.coords.latitude + "\n";
+        infopos += "Longitude : " + position.coords.longitude + "\n";
+        infopos += "Altitude : " + position.coords.altitude + "\n";
+        document.getElementById("infoposition").innerHTML = infopos;
+
+        //un nouvel objet LatLng pour Google Maps avec les paramètres de position
+        latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+        //ajout d'un marqueur à la position trouvée
+        var marker = new google.maps.Marker({ position: latlng, map: map, title: "Vous êtes ici", /*icon:"fleche.png"*/ });
+
+        //Permet de centrer la carte sur la position latlng
+        map.panTo(latlng);
+    }
+
+    //"lancement" du suivi de position avec possibilité d'annuler le suivi
+    //vérification que le navigateur supporte la géolocalisation
+    if (navigator.geolocation) {    
+
+        survId = navigator.geolocation.getCurrentPosition(maPosition, erreurPosition); // ne pê appellé qu'une seule fois
+    } else {
+
+        alert("Ce navigateur ne supporte pas la géolocalisation");
+    }
+
+    //Fonction de callback en cas d'erreur 
+    function erreurPosition(error) {
+        var info = "Erreur lors de la géolocalisation : ";
+
+        switch (error.code) {
+            case error.TIMEOUT: info += "Timeout";
+                break;
+            case error.PERMISSION_DENIED: info += "Vous n'avez pas donné la permission";
+                break;
+            case error.POSITION_UNAVAILABLE: info += "Votre position n'a pas pu être déterminée";
+                break;
+            case error.UNKNOWN_ERROR: info += "Erreur inconnue";
+                break;
+        }
+
+        document.getElementById("infoposition").innerHTML = info;
+    }
+
+</script>

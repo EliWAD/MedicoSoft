@@ -109,11 +109,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\SaveMe\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\SaveMe\Controllers\HomeController.cs" />
+    <Compile Include="Areas\SaveMe\SaveMeAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -132,8 +135,14 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\EliseD.jpg" />
+    <Content Include="Images\fleche.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\SaveMe\Views\web.config" />
+    <Content Include="Areas\SaveMe\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\SaveMe\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\SaveMe\Views\Home\Index.cshtml" />
+    <Content Include="Areas\SaveMe\Views\Home\Death.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

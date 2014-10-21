@@ -76,3 +76,7 @@ h2{
 .row                        {border-radius: 10px; border:solid 2px #808080;}
 .user              {width :500px; margin : -30px 20px 30px 50px; float:left;}
 .agenda            {width :500px; margin : -30px 50px 0px 20px; float :right;}
+
+
+/*SaveMe/home/index*/
+.map                        {width: 1080px; height:600px;}
